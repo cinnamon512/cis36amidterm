@@ -25,6 +25,7 @@ public class GameCharacter {
         position -= steps;
 
         //also works
+        //
         moveForward(steps * -1);
     }
 
