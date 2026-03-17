@@ -15,10 +15,23 @@ public class Playlist {
     }
 
     public void addSong(String song, String artist, int duration){
-        songs[size] = song;
+        this.songs[size] = song;
         artists[size] = artist;
         durations[size] = duration;
         size++;
+
+        //alternate way if no size variable
+        // no book keeping have to loop
+        for(int i = 0; i < songs.length; i++){
+            if(songs[i] == null){
+                this.songs[i] = song;
+                artists[i] = artist;
+                durations[i] = duration;
+                this.size++;
+                break;
+            }
+        }
+
     }
 
     public int goForwardOneSong(){
